@@ -8,7 +8,8 @@ describe SatSolver do
         solver = SatSolver.new
         a = solver.new_var
         b = solver.new_var
-      
+     
+        solver << [a,b] 
       end 
 
 
