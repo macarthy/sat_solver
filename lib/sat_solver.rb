@@ -6,6 +6,10 @@ class SatSolver
     end
 
 
+    def solve 
+      Object.new
+    end 
+
     def <<(token)
       @tokens << token
       self

@@ -13,7 +13,8 @@ describe SatSolver do
         solver << [-a,b] 
         solver << [a,-b]
 
-        expect(solver.solve).to be(Object)
+        expect(solver.solve).to be_kind_of(Object)
+
     end 
 
 
