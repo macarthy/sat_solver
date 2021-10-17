@@ -13,8 +13,11 @@ describe SatSolver do
         solver << [-a,b] 
         solver << [a,-b]
 
-        expect(solver.solve).to be_kind_of(Object)
+        result = solver.solve
+        expect(result).to be_kind_of(Object)
+        expect(result).to respond_to(:satisfied?)
 
+        expect(result.satisfied?).to be_instance_of(TrueClass)
     end 
 
 

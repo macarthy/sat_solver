@@ -7,7 +7,7 @@ class SatSolver
 
 
     def solve 
-      Object.new
+      Solution.new
     end 
 
     def <<(token)
@@ -26,6 +26,12 @@ class SatSolver
       @counter += 1
       "var_#{@counter}"
     end
+
+  class Solution
+    def satisfied?
+      true 
+    end 
+  end 
 
   class BNF
     def initialize(name)
