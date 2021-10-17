@@ -10,7 +10,11 @@ describe SatSolver do
         b = solver.new_var
      
         solver << [a,b] 
-      end 
+        solver << [-a,b] 
+        solver << [a,-b]
+
+        expect(solver.solve).to be(Object)
+    end 
 
 
   end 
